@@ -1,0 +1,9 @@
+﻿<!doctype html><html><head></head><body>
+<div id="b" style="width:252px;font:25px/25px 宋体;background:#000;color:#9f9;"></div><script>
+var d,a=[15],h=10,n=h,w=199,f=function(){return a.indexOf(z=Math.round(Math.random()*w))<0?z:f()}
+y=function(){s+=(j%h||!j?'':'<br/>')+(a.indexOf(j)<0?j==d?'\u2605':'&emsp;':'\u25a0'),j++<w?y():0}
+document.onkeydown=function(e){n={'37':-1,'39':1,'38':-h,'40':h}[(e?e:event).keyCode]}
+r=setInterval(function(){
+	(t=a[0]+n)<0||t>w||Math.abs(t%h-a[0]%h)>1||a.indexOf(t)>=0?clearInterval(r)|alert(0):0
+	a.unshift(t),d&&d!=t?a.pop():d=f(),s='',j=0,y(),document.getElementById('b').innerHTML=s},99)
+</script></body></html>

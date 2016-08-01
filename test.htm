@@ -1,0 +1,21 @@
+﻿<!doctype html><html><head></head><body>
+	
+<style> 
+body { margin: 0; }
+canvas { width: 100%; height: 100% }
+</style> 
+
+<canvas id="myCanvas">
+	your browser not support HTML5 canvas
+</canvas><script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.canvas.width  = window.innerWidth;
+ctx.canvas.height = window.innerHeight;
+ctx.fillStyle="#FF0000";
+ctx.fillRect(0,0,window.innerWidth/2,window.innerHeight);
+console.log(window.innerWidth)
+console.log(window.innerHeight)
+
+</script></body></html>

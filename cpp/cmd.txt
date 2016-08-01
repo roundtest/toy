@@ -1,0 +1,1 @@
+g++ recursion_no_optr_naked.cpp -m32 -w -o 1 && ./1
