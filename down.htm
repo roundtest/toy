@@ -1,0 +1,21 @@
+﻿<!doctype html><html><head></head><body>
+	
+<style> 
+body { margin: 0; }
+canvas { width: 100%; height: 100% }
+</style> 
+<script>
+
+function downloadFile(fileName, content){
+    var aLink = document.createElement('a');
+    var blob = new Blob([content]);
+    var evt = document.createEvent("HTMLEvents");
+    evt.initEvent("click", false, false);//initEvent 不加后两个参数在FF下会报错, 感谢 Barret Lee 的反馈
+    aLink.download = fileName;
+    aLink.href = URL.createObjectURL(blob);
+    aLink.dispatchEvent(evt);
+}
+
+downloadFile("aaa.txt","afewfewr");
+
+</script></body></html>
